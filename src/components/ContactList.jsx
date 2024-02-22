@@ -10,7 +10,8 @@ const dummyContacts = [
 ];
 
 export default function ContactList({ setSelectedContactId }) {
-  setSelectedContactId = { setSelectedContactId };
+    console.log('ContactList.jsx setSelectedContactId', setSelectedContactId)
+  setSelectedContactId =  setSelectedContactId ;
   const [contacts, setContacts] = useState(dummyContacts);
 
   useEffect(() => {
@@ -21,7 +22,6 @@ export default function ContactList({ setSelectedContactId }) {
         );
         const result = await response.json();
         setContacts(result);
-        console.log(contacts);
       } catch (error) {
         console.error(error);
       }

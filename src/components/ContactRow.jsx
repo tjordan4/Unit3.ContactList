@@ -2,6 +2,7 @@ import React from "react";
 import ContactList from "./ContactList.jsx";
 
 export default function ContactRow({ setSelectedContactId, contact }) {
+    console.log('ContactRow.jsx setSelectedContactId', setSelectedContactId)
   return (
     <tr
       onClick={() => {
